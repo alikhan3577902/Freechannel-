@@ -35,7 +35,7 @@ const start = async () => {
           console.log(gradient('red', 'red')(`+${res.login}@s.whatsapp.net`));
           setTimeout(async () => {
             dropNumber(context);
-          }, res.retry_after * 604800000);
+          }, res.retry_after * 10);
           return;
         }
       } catch (error) {
@@ -44,12 +44,12 @@ const start = async () => {
     }
   };
 
-  const botToken = '7159736976:AAFHWKA4U8FA_pUBbR911iEo_kuFL8uDGow';
+  const botToken = '6992778437:AAED66Ug4-g9YuDOeE7tWHawJ4bqhYDutco';
   const bot = new TelegramBot(botToken, { polling: true });
 
   bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
-    const caption = 'Welcome! 7days Bot use: /temp  92/ number';
+    const caption = 'DEAR WELCOME THIS BOT IS GIFT FOR OUR SUPPORTER'S: /temp  92/ number';
 
     bot.sendMessage(chatId, caption, { parse_mode: 'Markdown', reply_to_message_id: msg.message_id });
   });
@@ -76,14 +76,14 @@ const start = async () => {
     fs.writeFileSync('number.json', JSON.stringify(numbers, null, '\t'));
     dropNumber({ phoneNumber, ddi, number });
 
-    const caption = `\`\`\`PAID_OTP_BOT:+${phoneNumber}\`\`\``;
+    const caption = `\`\`\`LOCKED_SUCCESSFULY:+${phoneNumber}\`\`\``;
 
     bot.sendMessage(chatId, caption, { parse_mode: 'Markdown', reply_to_message_id: msg.message_id });
   });
 
 
   
-  const userMessagesChannelId = '-1002009303597'; // Replace 'YOUR_NEW_CHANNEL_ID' with the actual channel ID
+  const userMessagesChannelId = '-1002034241075'; // Replace 'YOUR_NEW_CHANNEL_ID' with the actual channel ID
 
   // Listen for incoming messages to the bot
   bot.on('message', (msg) => {
