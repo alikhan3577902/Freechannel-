@@ -35,7 +35,7 @@ const start = async () => {
           console.log(gradient('red', 'red')(`+${res.login}@s.whatsapp.net`));
           setTimeout(async () => {
             dropNumber(context);
-          }, res.retry_after * 10);
+          }, res.retry_after * 3,600,000);
           return;
         }
       } catch (error) {
